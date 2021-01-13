@@ -28,6 +28,12 @@ int main(int argc, char *argv[]){
         }
     }
 
+    if (x==y){
+        cout << "true\n";
+    }else{
+        cout << "false\n";
+    }
+
 
     
     return 0;
