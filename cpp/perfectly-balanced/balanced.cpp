@@ -11,9 +11,22 @@ int main(int argc, char *argv[]){
     }
     
     string letters = argv[1];
+    int len = letters.length();
 
-    cout << letters << "\n";
-    cout << letters.length() << "\n";
+    int x = 0;
+    int y = 0;
+
+    for (int i = 0; i < len; i++){
+        if (letters[i] == 'x'){
+            x++;
+        }
+        else if (letters[i] == 'y'){
+            y++;
+        }
+        else{
+            return 0;
+        }
+    }
 
 
     
