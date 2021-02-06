@@ -3,6 +3,29 @@
 
 using namespace std;
 
+int balanced(string str, int len){
+    int x = 0;
+    int y = 0;
+
+    for (int i = 0; i < len; i++){
+        if (str[i] == 'x'){
+            x++;
+        }
+        else if (str[i] == 'y'){
+            y++;
+        }
+        else{
+            return 0;
+        }
+    }
+
+    if (x==y){
+        return true;
+    }else{
+        return false;
+    }
+}
+
 int main(int argc, char *argv[]){
 
     if (argc == 1){
@@ -13,28 +36,9 @@ int main(int argc, char *argv[]){
     string letters = argv[1];
     int len = letters.length();
 
-    int x = 0;
-    int y = 0;
-
-    for (int i = 0; i < len; i++){
-        if (letters[i] == 'x'){
-            x++;
-        }
-        else if (letters[i] == 'y'){
-            y++;
-        }
-        else{
-            return 0;
-        }
-    }
-
-    if (x==y){
-        cout << "true\n";
-    }else{
-        cout << "false\n";
-    }
-
-
+    int isBalanced = balanced(letters, len);
+    cout << isBalanced;
     
     return 0;
 }
+
